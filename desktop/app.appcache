@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#v0.2.3
+#v0.2.5
 ../desktop/phone_bg.png
 ../desktop/SRF.ttf
 ../fonts/thefont.fnt
@@ -279,4 +279,5 @@ CACHE MANIFEST
 ../sprites/fox/FOX%20HUNT-0048.png
 
 NETWORK:
-*
+../index.html
+../app.js
