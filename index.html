@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html manifest="desktop/app.appcache">
+    <head>
+
+        <meta charset="utf-8" />
+
+        <style type="text/css">
+            html, body { margin:0; padding:0; }
+            body {
+                
+            }
+            #not-so-smart-phone {
+                position:fixed;
+                top:0;
+                left:0;
+                width:397px;
+                height:676px;
+                background-image: url('desktop/phone_bg.png');
+                background-repeat: no-repeat;
+            }
+            #canvas-container {
+                margin-top: 37px;
+                margin-left: 48px;
+            }
+            @font-face {
+              font-family: "SRF";
+              src: url("desktop/SRF.ttf");
+            }
+            #text-content {
+                font-family: 'SRF';
+                padding-left:440px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            window.LTB = {}; // app namepace
+            window.LTB.desktop = true;
+        </script>
+        
+        <script src="app.js"></script>
+
+    </head>
+    <body>
+
+        <div id="not-so-smart-phone">
+            <div id="canvas-container"></div>
+        </div>
+
+        <div id="text-content">
+            <h1>Random Bunny</h1>
+            <p>// TODO : link to download on the iOS AppStore</p>
+            <p>// TODO : link to download on the Android PlayStore</p>
+            <hr/>
+            <p>// TODO : share on some social networks</p>
+        </div>
+
+
+    </body>
+</html>
