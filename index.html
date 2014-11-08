@@ -4,7 +4,7 @@
 
         <link rel="icon" href="desktop/favicon.ico" />
         <link rel="shortcut icon" href="desktop/favicon.ico" />
-        
+
         <meta property="og:url" content="http://marcelfalliere.github.io/random-bunny/" />
         <meta property="og:title" content="Random Bunny" />
         <meta property="og:description" content="Play for free here !" />
@@ -201,9 +201,12 @@
     <script src="desktop/translate.js"></script>
     <script type="text/javascript">
         
+        function is_navigator_french() {
+            var language = window.navigator.userLanguage || window.navigator.language;
+            return language.toLowerCase().indexOf('fr') != -1;
+        }
 
-
-var messages_fr = {
+        var messages_fr = {
             "install"   : "Installez le sur votre téléphone intelligent !",
 
             "faq"       : "Foire aux questions",
@@ -243,15 +246,17 @@ var messages_fr = {
 
         };
 
-        var t = libTranslate.getTranslationFunction(messages_fr)
+        if (is_navigator_french()) {
+            var t = libTranslate.getTranslationFunction(messages_fr)
 
-        var domToTranslate = document.querySelectorAll('[data-translate]');
+            var domToTranslate = document.querySelectorAll('[data-translate]');
 
-        [].forEach.call(domToTranslate, function(div) { // querySelectorAll ne retournant pas un tableau, merci javascript ... d'où ce petit tricks de poney comme dirait l'autre
-          var translateKey = div.getAttribute('data-translate');
-          
-          div.innerHTML = t(translateKey);
-        });
+            [].forEach.call(domToTranslate, function(div) { // querySelectorAll ne retournant pas un tableau, merci javascript ... d'où ce petit tricks de poney comme dirait l'autre
+              var translateKey = div.getAttribute('data-translate');
+              
+              div.innerHTML = t(translateKey);
+            });
+        }
 
     </script>
 </html>
