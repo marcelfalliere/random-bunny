@@ -15,7 +15,18 @@
                 color: #333;
                 font-size:110%;
                 background-color:rgb(0,179,169);
+                font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
             }
+
+            #content {
+                position:relative;
+                width:932px;
+            }
+
+            #carrots {
+                text-align: center;
+            }
+
             #not-so-smart-phone {
                 position:fixed;
                 top:0;
@@ -34,7 +45,7 @@
               src: url("desktop/SRF.ttf");
             }
             #text-content {
-                font-family: 'SRF';
+                
                 margin-left:440px;
                 margin-right:40px;
                 background-color:rgba(255,255,255,0.8);
@@ -42,13 +53,20 @@
 
             }
             h1 {
+                font-family: 'SRF';
                 margin-top:0;
                 color:#003019;
-                font-size:250%;
+                font-size:4.5em;
                 text-align: center;
+                
+                color: white;
+                -webkit-text-stroke-width: 0.3px;
+                -webkit-text-stroke-color: #964300;
+            }
+            #text-content:hover h1 {
+                
             }
             h2 {
-                color:#003019;
             }
             hr {
                 height: 4px;
@@ -97,61 +115,140 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 
-        <div id="not-so-smart-phone">
-            <div id="canvas-container"></div>
+        <div id="content">
+
+            <div id="not-so-smart-phone">
+                <div id="canvas-container"></div>
+            </div>
+
+            <div id="text-content">
+                <h1>Random Bunny</h1>
+                
+                <div id="carrots">
+                    <img src="desktop/carrots.png" />
+                </div>
+
+                <h2 data-translate="install">Install it for your smartphone !</h2>
+
+                <img src="desktop/appstore.png" />
+
+                <img src="desktop/playstore.png" />
+
+        
+
+                <h2 data-translate="faq">Frequently asked questions</h2>
+                
+                <u data-translate="how_to">How do I play ?</u>
+                <p data-translate="how_to_1">Tap & hold on mobile (or press & hold your left mouse button) to position the bunny. Release your finger, and the bunny goes straight ahead ! You will realize once the bunny has started its mighty sprint to the next level you are not able to change its course. In fact, <strong>if you interact with the screen while the bunny is running you will start a new game</strong>. From scratch. Score goes to zero.</p>
+
+                <p data-translate="how_to2">On the other hand, when you reach the end of the level, the bunny waits for you to release it once more. So if you reach a new level (good job by the way!) you can reposition it using the same technique has a new game (tap&hold to position, release to let the bunny go in that direction).</p>
+
+                <u data-translate="piano">Can I stop the piano from playing ?</u>
+                <p data-translate="piano_1">Yes ! Tap anywhere in the quarter top part of the screen at anytime, even while the bunny is sprinting (not running, sprinting!).</p>
+
+                <u data-translate="levels">How many levels are there ?</u>
+                <p data-translate="levels_1">An amount which can be quantified as, well... infinity! Every level is procedurally generated. But the rules orchastrating the generation makes it harder and harder for the bunny to reach its destination. Even the music is randomized. Therefore the name. Random is a big part of the game, and the protagonist is, you said it, a bunny : Random Bunny.</p>
+
+                <u data-translate="goal">What is the goal ?</u>
+                <p data-translate="goal_1">The highest score of course ! Going farther and farther gets harder... Less carrots, more ennemies. And more kinds of ennemies. You think jumping a fox is easy ? It needs a certain amount of carrots. Now think jumping a car... Well that requires a more important amount of carrot.</p>
+
+                <u data-translate="rules">What are the rules ?</u>
+                <p data-translate="rules_1">One does not simply states the rules. You will have to discover them by yourself.</p>
+
+                <u data-translate="ftp">Why is it free to play on the interwebz but cost $0.99/0.79€ on the stores ?</u>
+                <p data-translate="ftp_1">The bunny runs at a silky smooth 60fps on your desktop browser (hopefuly), ios and android phones. This is possible using the HTML5 canvas technology, and a wrapper named CocoonJS.</p>
+                <p data-translate="ftp_2">It is free here because of two reasons. First is I wanted to give you guys a try before actually investing (can we really say .99 is investing?) in buying the game. There are two many free games out there that went full annoying on the "rate me" popup and insistent misplaced ads. The second reason is the iOS and Android stores, if you did not know, don't let you publish games free. As a developer, I have to pay them for my game to be published in the stores.</p>
+
+                <u data-translate="me">Who are you ?</u>
+                <p data-translate="me_1">Learn more about me on twitter : <a href="http://www.twitter.com/marcelfalliere" target="_blank">@marcelfalliere</a></p>
+
+                <u data-translate="why">Why ?</u>
+                <p data-translate="why_1">Because art. Oh and also I love making things, so I really hope you will enjoy this.</p>
+
+
+        
+                <h2  data-translate="social">Maybe share the love on your favorites social sites...</h2>
+                <p>
+                    <div class="facebook">
+                        <div class="fb-share-button" data-href="http://marcelfalliere.github.io/random-bunny/" data-layout="box_count"></div>
+                    </div>
+
+                    <div class="twitter">
+                        <a href="https://twitter.com/intent/tweet?button_hashtag=RandomBunny" class="twitter-hashtag-button" data-size="large" data-related="marcelfalliere" data-url="http://marcelfalliere.github.io/random-bunny/">Tweet #RandomBunny</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </div>
+
+
+                    <div class="reddit">
+                        <script type="text/javascript">
+                          reddit_url = "//marcelfalliere.github.io/random-bunny/";
+                          reddit_title = "Random Bunny, a game ...";
+                        </script>
+                        
+                        <script type="text/javascript" src="//www.reddit.com/buttonlite.js?i=4"></script>
+                    </div>
+                </p>
+
+            </div>
         </div>
-
-        <div id="text-content">
-            <h1>Random Bunny</h1>
-            
-            <h2>Install it for your smartphone !</h2>
-            <p>// TODO : link to download on the iOS AppStore</p>
-            <p>// TODO : link to download on the Android PlayStore</p>
-            
-    <!--
-            <h2>Maybe share the love on your favorites social sites...</h2>
-            <p>
-                <div class="facebook">
-                    <div class="fb-share-button" data-href="http://marcelfalliere.github.io/random-bunny/" data-layout="box_count"></div>
-                </div>
-
-                <div class="twitter">
-                    <a href="https://twitter.com/intent/tweet?button_hashtag=RandomBunny" class="twitter-hashtag-button" data-size="large" data-related="marcelfalliere" data-url="http://marcelfalliere.github.io/random-bunny/">Tweet #RandomBunny</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                </div>
-
-                <div class="reddit">
-                    <script type="text/javascript">
-                      reddit_url = "//marcelfalliere.github.io/random-bunny/";
-                      reddit_title = "Random Bunny, a game ...";
-                    </script>
-                    
-                    <script type="text/javascript" src="//www.reddit.com/buttonlite.js?i=4"></script>
-                </div>
-            </p>
-    -->
-
-            <h2>Frequently asked questions</h2>
-            
-            <u>How do I play ?</u>
-            <p>blabla</p>
-
-            <u>What is the goal ?</u>
-            <p>blabla</p>
-
-            <u>What are the rules ?</u>
-            <p>blabla</p>
-
-            <u>Why is it free to play on the interwebz but cost $0.99/0.79€ on the stores ?</u>
-            <p>blabla</p>
-
-            <u>Who are you ?</u>
-            <p>Learn more about me on twitter : <a href="http://www.twitter.com/marcelfalliere" target="_blank">@marcelfalliere</a></p>
-
-
-
-        </div>
-
 
     </body>
+
+
+    <script src="desktop/translate.js"></script>
+    <script type="text/javascript">
+        
+
+
+var messages_fr = {
+            "install"   : "Installez le sur votre téléphone intelligent !",
+
+            "faq"       : "Foire aux questions",
+
+            "how_to"    : "C'est quoi les touches ?",
+
+            "how_to_1"  : "Restez appuyé (avec le doigt sur l'écran du téléphone, avec la souris sur le pc) pour positionner le lapin. Lâchez votre doigt, et le lapin va se mettre à marcher dans la direction choisie, en ligne droite. Une fois que le lapin a commencé sa course épique vers le niveau suivant, vous ne pouvez plus changer sa direction. D'ailleurs, <strong>si vous interagissez avec l'écran pendant que le lapin court, un nouveau jeu sera démarré</strong>. De zéro! Vous retournez à la case départ.",
+
+            "how_to2"   : "Par contre, lorsque vous atteignez la fin du niveau, le lapin attend que vous le relachiez une deuxième fois. Donc si vous atteignez un nouveau niveau (bien joué au fait!) vous pouvez le reposionner avec la même technique qu'en début de jeu (restez appuyé pour positionner ; relâchez pour que la lapin commence à avancer)",
+
+            "piano"     : "Est-ce que je peux couper le son ?",
+
+            "piano_1"   : "Oui ! Cliquez ou appuyez n'importe où sur le quart haut de l'écran.",
+
+            "levels"    : "Combien y a-t-il de niveaux ?",
+
+            "levels_1"  : "Une quantité qui pourrait être qualifiée, eh bien ...d'infini ! Chaque niveau est généré procéduralement. Mais attention, plus on progresse dans les niveaux, plus les règles deviennent sévère ! La musique elle aussi est joué de façon aléatoire et suivant une certaine structure. D'où le nom du jeu, au fait. \"Random Bunny\"",
+
+            "goal"      : "Quel est le but du jeu ?",
+
+            "goal_1"    : "Le plus haut score bien sûr ! Allez de plus en plus loin, passez les niveaux avec brio sans que la lapin se cogne nulle part. La difficulté augmente avec chaque niveau - et elle est remise à zéro lorsque vous commencez un nouveau jeu. De moins en moins de carottes, de plus en plus d'ennemies. Vous pensez que sauter un renard est difficile ? Le lapin a besoin d'un certain nombre de carottes. Et maintenant, imaginez sauter par dessus une voiture en plein course ?!",
+
+            "rules"     : "Quelles sont les règles ?",
+            "rules_1"   : "A vous de les découvrir !",
+
+            "ftp"       : "Pourquoi est-ce que le jeu est gratuit ici mais coûte 0.99€ sur les stores ?",
+            "ftp_1"     : "Le lapin court à un parfait 60fps sur votre navigateur et téléphones iOS et Android. Ceci est possible par l'utilisation de la technologie Canvas d'HTML5, ainsi que d'un wrapper nommé CocoonJS.",
+            "ftp_2"     : "Ce jeu est gratuit ici pour deux raisons. D'abord, je voulais vous laisser l'occasion de tester le jeu avant de l'acheter. Il y a trop de jeu gratuit qui débordent de pubs tout aussi agaçantes qu'intempestives ! La deuxième raison est que la publication sur les stores d'Apple et de Google coutent un certain prix ; ce n'est pas gratuit.",
+
+            "me"        : "Qui êtes-vous ?",
+            "me_1"      : "<a href='http://www.twitter.com/marcelfalliere' target='_blank'>@marcelfalliere</a>",
+
+            "why"       : "  ",
+            "why_1"     : "  ",
+
+            "social"    : "Partagez sur votre réseau social préféré !"
+
+        };
+
+        var t = libTranslate.getTranslationFunction(messages_fr)
+
+        var domToTranslate = document.querySelectorAll('[data-translate]');
+
+        [].forEach.call(domToTranslate, function(div) { // querySelectorAll ne retournant pas un tableau, merci javascript ... d'où ce petit tricks de poney comme dirait l'autre
+          var translateKey = div.getAttribute('data-translate');
+          
+          div.innerHTML = t(translateKey);
+        });
+
+    </script>
 </html>
