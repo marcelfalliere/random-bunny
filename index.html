@@ -19,21 +19,24 @@
                 font-size:110%;
                 background-color:rgb(0,179,169);
                 font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+                background-image:url('desktop/banner.png');
+                background-size:auto 100%;
             }
 
             #content {
                 position:relative;
-                width:932px;
+                width:900px;
+                margin:0 auto;
             }
 
             #carrots {
+                margin-top:20px;
                 text-align: center;
             }
 
             #not-so-smart-phone {
                 position:fixed;
                 top:0;
-                left:0;
                 width:397px;
                 height:676px;
                 background-image: url('desktop/phone_bg.png');
@@ -48,23 +51,23 @@
               src: url("desktop/SRF.ttf");
             }
             #text-content {
-                
-                margin-left:440px;
-                margin-right:40px;
                 background-color:rgba(255,255,255,0.8);
-                padding:20px;
-
+                padding:30px;
+                margin-left:300px;
+                padding-left:128px;
             }
+
+
             h1 {
                 font-family: 'SRF';
-                margin-top:0;
-                color:#003019;
-                font-size:4.5em;
+                margin-top: 0;
+                color: #003019;
+                font-size: 6.5em;
                 text-align: center;
-                
                 color: white;
-                -webkit-text-stroke-width: 0.3px;
-                -webkit-text-stroke-color: #964300;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+                margin: 0;
             }
             #text-content:hover h1 {
                 
@@ -84,6 +87,7 @@
             }
             p {
                 font-family: Helvetica, arial, freesans, clean, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+                text-align:justify;
             }
         </style>
 
@@ -93,7 +97,6 @@
         </script>
         
         <script src="app.js"></script>
-
 
     </head>
     <body>
@@ -125,13 +128,14 @@
             </div>
 
             <div id="text-content">
+
                 <h1>Random Bunny</h1>
                 
                 <div id="carrots">
                     <img src="desktop/carrots.png" />
                 </div>
 
-                <h2 data-translate="install">Install it for your smartphone !</h2>
+                <h2 data-translate="install">Install it on your smartphone !</h2>
 
                 <img src="desktop/appstore.png" />
 
@@ -259,4 +263,10 @@
         }
 
     </script>
+
+
+    <script>
+        document.querySelector('body').style.backgroundPosition= randomBetween(0,100)+"% "+randomBetween(0,100)+"%";
+    </script>
+
 </html>
